@@ -1,0 +1,25 @@
+$base-size: 16;
+
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1em;
+}
+
+
+
+@mixin flexy ($direction) {
+ display: flex;
+ flex-wrap: nowrap;
+ flex-direction: $direction;
+}
+
+@mixin raised {
+  background-color: $light;
+  box-shadow: 4px 9px 14px rgba(104, 109, 242, 0.25), -11px -9px 11px rgba(255, 255, 255, 0.36), inset 5px 4px 4px rgba(255, 255, 255, 0.8);
+}
+
+
+@mixin center{
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}

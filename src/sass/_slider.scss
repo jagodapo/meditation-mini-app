@@ -1,0 +1,53 @@
+// https://codepen.io/MinzCode/pen/rNxYYOZ
+
+.slider-container {
+	position: relative;
+}
+.slider-container .bar {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+    transform: translateX(-50%);
+	bottom: 0;
+	width: 120px;
+	height: 10px;
+	border-radius: 5px;
+	background: $medium;
+box-shadow: inset 2.98089px 1.49045px 2.98089px rgba(106, 144, 241, 0.25);
+border-radius: 20.121px;
+	overflow: hidden;
+}
+.slider-container .bar .fill {
+	display: block;
+	width: 0;
+	height: 100%;
+	background-color: $dark;
+}
+.slider-container .slider {
+	position: relative;
+	z-index: 2;
+	-webkit-appearance: none;
+	width: 120px;
+	height: 10px;
+	border-radius: 5px;
+	outline: none;
+	background-color: transparent;
+}
+.slider-container .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 23px;
+	height: 23px;
+	background-color: $dark;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+    background: #E6E9F5;
+    box-shadow: 2.98089px 6.70701px 10.4331px rgba(104, 109, 242, 0.15), -1px -1px 10px rgba(104, 109, 242, 0.1), inset 7px 0px 3px -3px rgba(255, 255, 255, 0.25);
+	transition: .3s ease-in-out;
+}
+.slider-container .slider::-webkit-slider-thumb:hover {
+	box-shadow: 1px 1px 13px 3px #003E9B, 2.98089px 6.70701px 10.4331px rgba(104, 109, 242, 0.15), -1px -1px 10px rgba(104, 109, 242, 0.1), inset 7px 0px 3px -3px rgba(255, 255, 255, 0.25);
+}
+.slider-container .slider:active::-webkit-slider-thumb {
+box-shadow: 1px 1px 13px 7px #003E9B, 2.98089px 6.70701px 10.4331px rgba(104, 109, 242, 0.15), -1px -1px 10px rgba(104, 109, 242, 0.1), inset 7px 0px 3px -3px rgba(255, 255, 255, 0.25);
+}

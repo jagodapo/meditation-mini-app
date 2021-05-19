@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $light;
+    font-family: 'Fira Sans', sans-serif;
+    color: $dark;
+    
+}
+section.play-conteiner .hide {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.main{
+    width: 100%;
+    // margin: 0 0;
+
+    margin: 0 auto;
+    align-items: center;
+    padding: 16px 8px 16px 8px;
+    min-height: 100vh;
+    // border: 5px solid yellowgreen;
+    @include flexy(column);
+    justify-content: flex-start;
+
+}
+
+.mode-container {
+    @include flexy(row);
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    // border: 3px solid red;
+
+
+
+    &__button {
+        font-size: size(16);
+    border-radius: 10%;
+    padding: size(16) size(16) size(16) size(16);
+    @include raised;
+    cursor: pointer;
+    }
+   
+}
+
+
+.round-timer-container {
+    // border: 2px solid black;
+    position: relative;
+    min-height: 300px;
+    width: 100%;
+    height: auto;
+    &__img {
+        position: absolute;
+        object-fit: contain;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translateX(calc(-50% - 15px)) translateY(calc(-50% + 10px));
+
+    }
+
+    &__clock {
+        position: absolute;
+        width: auto;
+        object-fit: contain;
+        border-radius: 50%;
+        width: 90%;
+        height: 90%;
+        @include center;
+
+    }
+    &__copy {
+        position: absolute;
+        display: block;
+        @include center;
+        font-weight: 500;
+        font-size: calc(28);
+
+
+    }
+
+
+
+}
+
+
+.play-conteiner {
+    // border: 2px solid blue;
+    @include flexy(row);
+    justify-content: space-between;
+    width: 70%;
+    max-width: 220px;
+  
+ &__button {
+    width: 50px;
+    height: 50px;
+    @include raised;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+
+.sounds-container {
+    margin-top: 20px;
+    // border: 2px solid red;
+    @include flexy(column);
+
+
+    &__element {
+        @include flexy(column);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    &__card{
+        cursor: pointer;
+    @include raised;
+    border-radius: 4%;
+    width: 104px;
+    height: 104px;
+    @include flexy(column);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    
+
+    &__img {
+        padding-bottom: 10px;
+    }
+    }
+
+
+}
+
+}
+
+
+
+@media only screen and (min-width: 480px) {
+.main {
+    max-width: 90%;
+    background-color: red;
+}    
+.sounds-container {
+    flex-direction: row;
+}
+
+.round-timer-container__copy {
+    font-size: size(36);
+}
+
+.round-timer-container {
+    height: 450px;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+    .main {
+        background-color: yellow;
+       
+    }
+
+    .round-timer-container__copy {
+        font-size: size(36);
+    }
+
+    .mode-container__button {
+        padding:  size(24) size(48);
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    .main {
+        background-color: blue;
+        height: 100vh;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .sounds-container , .mode-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+
+  
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    .main {
+        background-color: pink;
+        height: 100vh;
+        justify-content: space-around;
+        // width: 65%;
+        width: 100%;
+        max-width: 1600px;
+    }
+    .sounds-container , .mode-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+//pomysl nad flex grow
+// https://rangeslider.js.org/
