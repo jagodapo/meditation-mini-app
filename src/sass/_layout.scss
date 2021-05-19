@@ -39,11 +39,38 @@ section.play-conteiner .hide {
 
 
     &__button {
-        font-size: size(16);
+    font-size: size(16);
     border-radius: 10%;
     padding: size(16) size(16) size(16) size(16);
-    @include raised;
-    cursor: pointer;
+    pointer-events: none;
+
+    &--pressed {
+        @extend .mode-container__button;
+        box-shadow: 5px 4px 4px rgba(255, 255, 255, 0.2), inset 4px 9px 14px rgba(104, 109, 242, 0.25), inset -11px -9px 11px rgba(255, 255, 255, 0.36);
+
+    }
+
+
+    &--disabled {
+        @extend .mode-container__button;
+        color: #7C96BE;
+        @include raised;
+        position: relative;
+
+        &::after {
+            content: "coming soon";
+            position: absolute;
+            font-size: size(9);
+            font-weight: 500;
+
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+
     }
    
 }
@@ -205,7 +232,7 @@ section.play-conteiner .hide {
         justify-content: space-around;
         // width: 65%;
         width: 100%;
-        max-width: 1600px;
+        max-width: 1200px;
     }
     .sounds-container , .mode-container {
         width: 100%;

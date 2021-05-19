@@ -66,3 +66,4 @@ function subtractOneMinute() {
     userDuration -=60
 }
 export {interval, subtractHidden, addHidden, duration, userDuration, runTimer, updateTimerDisplay, updateCountDown, resetTimer, resetButtons, addOneMinute, subtractOneMinute}
+
