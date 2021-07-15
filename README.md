@@ -1,5 +1,5 @@
 # Mini Meditation App
----
+
 I created a music player which loops natural sounds, as a JavaScript practice project. The timer function helps to boost productivity. 
 
 ### What I learnt 
