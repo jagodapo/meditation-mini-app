@@ -58,7 +58,7 @@ section.play-conteiner .hide {
         position: relative;
 
         &::after {
-            content: "coming soon";
+            content: "(soon)";
             position: absolute;
             font-size: size(9);
             font-weight: 500;
@@ -176,7 +176,7 @@ section.play-conteiner .hide {
 @media only screen and (min-width: 480px) {
 .main {
     max-width: 90%;
-    background-color: red;
+    // background-color: red;
 }    
 .sounds-container {
     flex-direction: row;
@@ -195,7 +195,7 @@ section.play-conteiner .hide {
 
 @media only screen and (min-width: 768px) {
     .main {
-        background-color: yellow;
+        // background-color: yellow;
        
     }
 
@@ -209,9 +209,11 @@ section.play-conteiner .hide {
 }
 
 
+
+
 @media only screen and (min-width: 768px) and (orientation: portrait) {
     .main {
-        background-color: blue;
+        // background-color: blue;
         height: 100vh;
         justify-content: space-around;
         width: 80%;
@@ -227,12 +229,12 @@ section.play-conteiner .hide {
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
     .main {
-        background-color: pink;
+        // background-color: pink;
         height: 100vh;
         justify-content: space-around;
         // width: 65%;
         width: 100%;
-        max-width: 1200px;
+        max-width: 800px;
     }
     .sounds-container , .mode-container {
         width: 100%;
